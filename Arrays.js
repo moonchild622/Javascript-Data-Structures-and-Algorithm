@@ -12,13 +12,12 @@ function findSum(arr, weight) {
             if (arr[i]+arr[j]==weight){
                 return [i,j];
             }
-            console.log(weight);
         }
     }
     return -1;
 }
 
-console.log(findSum([1,2,3,4,5], 7));
+findSum([1,2,3,4,5], 7);
 
 function twoSum(arr, weight){
     for (var i = 0, arrLength = arr.length; i < arrLength; i++){
@@ -33,8 +32,7 @@ function twoSum(arr, weight){
 
 //Big O complexity.
 //ftwoSum(n) = O(n + n) = ftwoSum(n) = O(n^2);
-
-console.log(twoSum([3,4,5,6,6], 9));
+twoSum([3,4,5,6,6], 9);
 
 
 //More Robust solution using HashMap
@@ -77,3 +75,47 @@ const mockArray = [10,30,40,50,60,70,80,90];
 for(var i=0; i < mockArray.length; i++){
    //console.log(mockArray[i]); 
 }
+
+
+//leetcode accepted answer
+  /*var twoSumArr = function(nums, target) {
+    let hash = {};
+    
+    for(let i = 0; i < nums.length; i++){
+        let diff = target - nums[i];
+        if(diff in hash){
+            return [hash[diff], i];
+        }else{
+            hash[nums[i]] = i;
+        }
+    }
+};*/
+
+var twoSumArray = function(nums, target) {
+    let hash = {};
+
+    for(var i=0; i < nums.length; i++ ){
+        let diff = target - nums[i]
+        if(diff in hash){
+            return [hash[diff], i]
+        } else{
+            hash[nums[i]] = i;
+        }
+    }
+};
+
+
+var twoSmArray = function(nums, target){
+    var hash = {};
+    for(var i = 0; i < nums.length; i++){
+        var diff = target - nums[i];
+        if(diff in hash){
+            return [hash[diff], i]
+        } else{
+            hash[nums[i]] = i;
+        }
+    }
+}
+
+console.log(twoSmArray([10,30,40,50,60,70,80,90], 170));
+
