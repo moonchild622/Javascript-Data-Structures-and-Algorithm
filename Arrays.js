@@ -121,7 +121,7 @@ console.log(twoSmArray([10,40,50,60,0,80,90], 170));
 
 
 //Leetcode question 2 
-const removeDuplicates = nums => {
+const removeDuplicate = nums => {
     
     let index = 0;
     for (let i = 0; i < nums.length; i++) {
@@ -135,6 +135,6 @@ const removeDuplicates = nums => {
     
 };
 
-console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
+console.log(removeDuplicate([0,0,1,1,1,2,2,3,3,4]));
 
 
