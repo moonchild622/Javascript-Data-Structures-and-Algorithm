@@ -117,7 +117,7 @@ var twoSmArray = function(nums, target){
     }
 }
 
-console.log(twoSmArray([10,30,40,50,60,70,80,90], 170));
+console.log(twoSmArray([10,40,50,60,70,80,90], 170));
 
 
 //Leetcode question 2 
